@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Your chances for Diabetes disease....by Ms. Farhana Shaikh</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="HighBP" id="HighBP" placeholder="HighBP (0 or 1)">
+            <input type="number" name="HighChol" id="HighChol" placeholder="HighChol (0 or 1)">
+            <input type="number" name="CholCheck" id="CholCheck" placeholder="CholCheck (0 or 1)">
+            <input type="number" name="BMI" id="BMI" placeholder="BMI Score">
+            <input type="number" name="Smoker" id="Smoker" placeholder="Smoker (0 or 1)">
+            <input type="number" name="Stroke" id="Stroke"placeholder="Stroke (0 or 1)">
+            <input type="number" name="HeartDiseaseorAttack" id="HeartDiseaseorAttack" placeholder="Heart Disease or Attack">
+            <input type="number" name="PhysActivity" id="PhysActivity" placeholder="Physical Activity (0 or 1)">
+            <input type="number" name="Fruits" id="Fruits" placeholder="Fruits Intake(0 or 1)">
+            <input type="number" name="Veggies" id="Veggies" placeholder="Veggies Intake (0 or 1)">
+            <input type="number" name="HvyAlcoholConsump" id="HvyAlcoholConsump" placeholder="Heavy Alcohol Consump (0 or 1)">
+            <input type="number" name="AnyHealthcare" id="AnyHealthcare"placeholder="Any Health Care (0 or 1)">
+            <input type="number" name="NoDocbcCost" id="NoDocbcCost"placeholder="NoDocbcCost (0 or 1)">
+            <input type="number" name="GenHlth" id="GenHlth"placeholder="GenHlth (0 to 5)">
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
